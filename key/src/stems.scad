@@ -1,5 +1,6 @@
 include <stems/cherry.scad>
 include <stems/rounded_cherry.scad>
+include <stems/fatten_cherry.scad>
 include <stems/box_cherry.scad>
 include <stems/alps.scad>
 include <stems/filled.scad>
@@ -13,6 +14,8 @@ module stem(stem_type, depth, slop){
       cherry_stem(depth, slop);
     } else if (stem_type == "rounded_cherry") {
       rounded_cherry_stem(depth, slop);
+    } else if (stem_type == "fatten_cherry") {
+      fatten_cherry_stem(depth, slop);
     } else if (stem_type == "box_cherry") {
       box_cherry_stem(depth, slop);
     } else if (stem_type == "filled") {

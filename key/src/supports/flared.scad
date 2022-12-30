@@ -11,6 +11,10 @@ module flared(stem_type, loft, height) {
       linear_extrude(height=height, scale = scale_for_45(height, $rounded_cherry_stem_d)){
         circle(d=$rounded_cherry_stem_d);
       }
+    } else if (stem_type == "fatten_cherry") {
+      linear_extrude(height=height, scale = scale_for_45(height, $rounded_cherry_stem_d)){
+        circle(d=$fatten_cherry_stem_d);
+      }
     } else if (stem_type == "alps") {
       alps_scale = [scale_for_45(height, $alps_stem[0]), scale_for_45(height, $alps_stem[1])];
       linear_extrude(height=height, scale = alps_scale){
